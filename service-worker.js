@@ -1,4 +1,4 @@
-const CACHE_NAME = 'cj-horarios-equipa-cache-v1';
+const CACHE_NAME = 'cj-horarios-equipa-cache-v2';
 const SCOPE = '/cj-horarios-equipa/';
 const CORE_ASSETS = [SCOPE, SCOPE + 'index.html', SCOPE + 'manifest.json'];
 
