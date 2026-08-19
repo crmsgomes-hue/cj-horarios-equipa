@@ -223,7 +223,7 @@ async function carregarSemana() {
     else {
       const shiftsHtml = turnosDia.map(t => t.tipo === "folga"
         ? `<div class="shift folga">🌙 Folga</div>`
-        : `<div class="shift">${t.hora_inicio?.slice(0,5)} – ${t.hora_fim?.slice(0,5)}${t.noturno ? '<span class="night"> · noturno</span>' : ''}</div>`
+        : `<div class="shift">${t.hora_inicio?.slice(0,5)} – ${t.hora_fim?.slice(0,5)}${t.noturno ? '<span class="night"> · noturno</span>' : ''}${t.almoco_horas > 0 ? `<div style="font-size:11px;color:var(--text-dim);margin-top:2px">🍽 ${t.almoco_horas}h de almoço</div>` : ''}</div>`
       ).join("");
       row.innerHTML = dowHtml + shiftsHtml;
     }
